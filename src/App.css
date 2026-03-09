@@ -1581,6 +1581,147 @@
   width: 100%;
 }
 
+/* Flow 1 – zarovnání tlačítek a cen ve stejné výšce */
+.bundles .bundle-card {
+  display: flex;
+  flex-direction: column;
+}
+.bundles .bundle-card .bundle-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.bundles .bundle-card .bundle-body .bundle-services {
+  flex: 1;
+  min-height: 0;
+}
+.bundles .bundle-card .bundle-body .bundle-meta {
+  flex-shrink: 0;
+}
+.bundles .bundle-card .bundle-body .btn-primary {
+  margin-top: auto;
+}
+
+/* SECTION A – Quick purchase bundles */
+.quick-bundles-section {
+  padding: 64px 0;
+}
+
+.quick-bundles-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.quick-bundles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .quick-bundles-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bundle-card-body {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.bundle-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.bundle-meta .bundle-savings {
+  font-weight: 600;
+  color: var(--savings-green);
+}
+
+/* SECTION B – Service hub */
+.service-hub-section {
+  padding: 64px 0;
+  background: var(--bg-page);
+}
+
+.service-hub-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.service-hub-sub {
+  text-align: center;
+  color: var(--text-secondary);
+  margin: 0 0 32px;
+  font-size: 16px;
+}
+
+.service-hub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .service-hub-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+.service-hub-card {
+  display: block;
+  padding: 28px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.service-hub-card:hover {
+  border-color: var(--o2-blue);
+  box-shadow: var(--shadow);
+}
+
+.service-hub-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--text-primary);
+}
+
+.service-hub-card-body {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+.service-hub-cta {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--o2-blue);
+}
+
+.service-hub-card:hover .service-hub-cta {
+  text-decoration: underline;
+}
+
 /* Trust bar */
 .trust {
   background: var(--text-primary);

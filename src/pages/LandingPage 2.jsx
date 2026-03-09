@@ -465,6 +465,91 @@ export default function LandingPage({ order, setOrder, onOrder, scrollToBuilder,
           </div>
         </section>
 
+        {/* SECTION A – Quick purchase bundles */}
+        <section className="quick-bundles-section">
+          <div className="section-inner">
+            <h2>Nejoblíbenější balíčky</h2>
+            <div className="quick-bundles-grid">
+              <article className="bundle-card">
+                <div className="bundle-body">
+                  <h3 className="bundle-name">Mobil + Internet</h3>
+                  <p className="bundle-card-body">Nejoblíbenější kombinace pro domácnost.</p>
+                  <div className="bundle-meta">
+                    <span>Cena od — Kč</span>
+                    <span className="bundle-savings">Ušetříte — Kč</span>
+                  </div>
+                  <button
+                    className="btn-primary"
+                    onClick={() => scrollTo(builderRef)}
+                  >
+                    Vybrat balíček
+                  </button>
+                </div>
+              </article>
+              <article className="bundle-card">
+                <div className="bundle-body">
+                  <h3 className="bundle-name">Rodinný balíček</h3>
+                  <p className="bundle-card-body">Více mobilů + internet pro celou rodinu.</p>
+                  <div className="bundle-meta">
+                    <span>Cena od — Kč</span>
+                    <span className="bundle-savings">Ušetříte — Kč</span>
+                  </div>
+                  <button
+                    className="btn-primary"
+                    onClick={() => scrollTo(builderRef)}
+                  >
+                    Vybrat balíček
+                  </button>
+                </div>
+              </article>
+              <article className="bundle-card">
+                <div className="bundle-body">
+                  <h3 className="bundle-name">Internet + TV</h3>
+                  <p className="bundle-card-body">Zábava doma s internetem a televizí.</p>
+                  <div className="bundle-meta">
+                    <span>Cena od — Kč</span>
+                    <span className="bundle-savings">Ušetříte — Kč</span>
+                  </div>
+                  <button
+                    className="btn-primary"
+                    onClick={() => scrollTo(builderRef)}
+                  >
+                    Vybrat balíček
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION B – What you can add to O2 Spolu (service hub) */}
+        <section className="service-hub-section">
+          <div className="section-inner">
+            <h2>Co všechno můžete přidat do O2 Spolu</h2>
+            <p className="service-hub-sub">Vyberte službu a přidejte ji do balíčku se slevou.</p>
+            <div className="service-hub-grid">
+              {/* TODO: use existing route/url for NEO+ tariffs when present */}
+              <a href="#" className="service-hub-card">
+                <h3 className="service-hub-card-title">Neomezené mobilní tarify NEO+</h3>
+                <p className="service-hub-card-body">Vyberte tarif a přidejte ho do O2 Spolu pro vyšší slevu.</p>
+                <span className="service-hub-cta">Zobrazit tarify</span>
+              </a>
+              {/* TODO: use existing route/url for Oneplay when present */}
+              <a href="#" className="service-hub-card">
+                <h3 className="service-hub-card-title">Oneplay (TV)</h3>
+                <p className="service-hub-card-body">Televize a zábava, kterou můžete spojit s internetem a mobilem.</p>
+                <span className="service-hub-cta">Zobrazit Oneplay</span>
+              </a>
+              {/* TODO: use existing route/url for Pevný internet when present */}
+              <a href="#" className="service-hub-card">
+                <h3 className="service-hub-card-title">Pevný internet</h3>
+                <p className="service-hub-card-body">Internet domů jako základ balíčku – přidejte ho a ušetřete.</p>
+                <span className="service-hub-cta">Zobrazit internet</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* SECTION 6 – FAQ */}
         <section className="faq-section">
           <div className="section-inner">

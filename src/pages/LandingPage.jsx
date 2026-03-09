@@ -109,43 +109,66 @@ export default function LandingPage({ onSelectBundle }) {
           </div>
         </section>
 
-        {/* Bundles */}
+        {/* Nejoblíbenější balíčky */}
         <section className="bundles" ref={bundlesRef}>
           <div className="section-inner">
             <h2>Nejoblíbenější balíčky</h2>
-            <p className="bundles-sub">Vyberte si – ceny už obsahují slevu O2 Spolu</p>
             <div className="bundle-grid">
-              {BUNDLES.map((bundle) => (
-                <article
-                  key={bundle.id}
-                  className={`bundle-card ${bundle.label === 'Nejoblíbenější' ? 'bundle-card--featured' : ''}`}
-                >
-                  {bundle.label === 'Nejoblíbenější' && (
-                    <span className="bundle-badge">Nejoblíbenější</span>
+              {BUNDLES.map((b) => (
+                <article key={b.id} className={`bundle-card${b.id === 'family' ? ' bundle-card--featured' : ''}`}>
+                  {b.id === 'family' && (
+                    <span className="bundle-badge">Nejoblíbenější volba</span>
                   )}
                   <div className="bundle-body">
-                    <h3 className="bundle-name">{bundle.label}</h3>
+                    <h3 className="bundle-name">{b.label}</h3>
                     <ul className="bundle-services">
-                      {bundle.services.map((s, i) => (
+                      {b.services.map((s, i) => (
                         <li key={i}>{s}</li>
                       ))}
                     </ul>
-                    <div className="bundle-price-row">
-                      <span className="bundle-price">{bundle.price} Kč</span>
-                      <span className="bundle-period">/měsíc</span>
-                    </div>
-                    <div className="bundle-savings">
-                      Ušetříte {bundle.savings} Kč
+                    <div className="bundle-meta">
+                      <span className="bundle-price">{b.price} Kč</span>
+                      {b.savings > 0 && (
+                        <span className="bundle-savings">Ušetříte {b.savings} Kč</span>
+                      )}
                     </div>
                     <button
                       className="btn-primary"
-                      onClick={() => onSelectBundle(bundle)}
+                      onClick={() => onSelectBundle(b)}
                     >
                       Vybrat balíček
                     </button>
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION B – What you can add to O2 Spolu (service hub) */}
+        <section className="service-hub-section">
+          <div className="section-inner">
+            <h2>Co všechno můžete přidat do O2 Spolu</h2>
+            <p className="service-hub-sub">Vyberte službu a přidejte ji do balíčku se slevou.</p>
+            <div className="service-hub-grid">
+              {/* TODO: use existing route/url for NEO+ tariffs when present */}
+              <a href="#" className="service-hub-card">
+                <h3 className="service-hub-card-title">Neomezené mobilní tarify NEO+</h3>
+                <p className="service-hub-card-body">Vyberte tarif a přidejte ho do O2 Spolu pro vyšší slevu.</p>
+                <span className="service-hub-cta">Zobrazit tarify</span>
+              </a>
+              {/* TODO: use existing route/url for Oneplay when present */}
+              <a href="#" className="service-hub-card">
+                <h3 className="service-hub-card-title">Oneplay (TV)</h3>
+                <p className="service-hub-card-body">Televize a zábava, kterou můžete spojit s internetem a mobilem.</p>
+                <span className="service-hub-cta">Zobrazit Oneplay</span>
+              </a>
+              {/* TODO: use existing route/url for Pevný internet when present */}
+              <a href="#" className="service-hub-card">
+                <h3 className="service-hub-card-title">Pevný internet</h3>
+                <p className="service-hub-card-body">Internet domů jako základ balíčku – přidejte ho a ušetřete.</p>
+                <span className="service-hub-cta">Zobrazit internet</span>
+              </a>
             </div>
           </div>
         </section>
