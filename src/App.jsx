@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PasswordGate from './components/PasswordGate'
 import LandingFlowWrapper from './components/LandingFlowWrapper'
 import CheckoutDrawer from './components/CheckoutDrawer'
 import './App.css'
@@ -29,8 +30,9 @@ export default function App() {
   }
 
   return (
-    <>
-      <LandingFlowWrapper
+    <PasswordGate>
+      <>
+        <LandingFlowWrapper
         onSelectBundle={handleSelectBundle}
         onOrder={handleOrder}
       />
@@ -44,6 +46,7 @@ export default function App() {
         onBack={handleBack}
         orderBasedBackCloses={!!selectedOrder}
       />
-    </>
+      </>
+    </PasswordGate>
   )
 }
