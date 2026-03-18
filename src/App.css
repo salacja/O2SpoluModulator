@@ -96,6 +96,50 @@
   margin-right: 0;
 }
 
+/* Flow 1 – hero layout reusing Flow 2 structure */
+.landing-flow1 .hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .landing-flow1 .hero-inner {
+    flex-direction: row;
+    text-align: left;
+    gap: 60px;
+  }
+  .landing-flow1 .hero-content {
+    flex: 1;
+  }
+  .landing-flow1 .hero-illustration {
+    flex: 1;
+    max-width: 420px;
+  }
+  .landing-flow1 .hero-formula {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .landing-flow1 .hero-illustration {
+    display: none;
+  }
+}
+
+.landing-flow1 .hero h1 {
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.landing-flow1 .hero-sub {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* Explainer formula – Mobil + Internet + TV = sleva */
 .explainer-formula {
   display: flex;
@@ -218,6 +262,45 @@
 
 .explainer-example-row.highlight strong {
   color: var(--savings-green);
+}
+
+/* Flow 3 – Co je O2 Spolu: text vlevo, příklad úspory vpravo */
+.landing-flow3 .explainer-split {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.landing-flow3 .explainer-left .explainer-cols {
+  grid-template-columns: 1fr;
+  margin: 0;
+}
+
+.landing-flow3 .explainer-cta {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .landing-flow3 .explainer-split {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .landing-flow3 .explainer-left {
+    flex: 1;
+    min-width: 0;
+  }
+  .landing-flow3 .explainer-right {
+    width: 420px;
+    flex: 0 0 420px;
+    max-width: 100%;
+  }
+  .landing-flow3 .explainer-right .explainer-example {
+    margin: 0;
+  }
 }
 
 /* Example savings (Flow 2) */

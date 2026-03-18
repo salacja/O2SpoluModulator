@@ -137,7 +137,7 @@ export default function LandingPage({ order, setOrder, onOrder, scrollToBuilder,
   }
 
   return (
-    <div className="landing landing-responsive">
+    <div className="landing landing-responsive landing-flow3">
       <header className="landing-header">
         <div className="header-inner">
           <span className="logo">O<sub>2</sub></span>
@@ -173,15 +173,8 @@ export default function LandingPage({ order, setOrder, onOrder, scrollToBuilder,
                 Vybrat službu
               </button>
             </div>
-          </div>
-        </section>
-
-        {/* SECTION 2 – Co je O2 Spolu (důležité – uživatel musí pochopit) */}
-        <section className="explainer" ref={explainerRef}>
-          <div className="section-inner">
-            <h2>Co je O2 Spolu?</h2>
-            <div className="explainer-visual">
-              <div className="explainer-formula">
+            <div className="hero-illustration">
+              <div className="explainer-formula hero-formula">
                 <span className="formula-item">Mobil</span>
                 <span className="formula-plus">+</span>
                 <span className="formula-item">Internet</span>
@@ -191,41 +184,57 @@ export default function LandingPage({ order, setOrder, onOrder, scrollToBuilder,
                 <span className="formula-result">sleva</span>
               </div>
             </div>
-            <div className="explainer-cols">
-              <div className="explainer-col">
-                <h3>Co to je</h3>
-                <p>O2 Spolu je sleva za to, že máte u O2 více služeb najednou. Mobil, internet, TV – čím víc spojíte, tím větší úspora.</p>
+          </div>
+        </section>
+
+        {/* SECTION 2 – Co je O2 Spolu (důležité – uživatel musí pochopit) */}
+        <section className="explainer" ref={explainerRef}>
+          <div className="section-inner">
+            <h2>Co je O2 Spolu?</h2>
+            <div className="explainer-split">
+              <div className="explainer-left">
+                <div className="explainer-cols">
+                  <div className="explainer-col">
+                    <h3>Co to je</h3>
+                    <p>O2 Spolu je sleva za to, že máte u O2 více služeb najednou. Mobil, internet, TV – čím víc spojíte, tím větší úspora.</p>
+                  </div>
+                  <div className="explainer-col">
+                    <h3>Jak to funguje</h3>
+                    <p>Sleva se započítá automaticky. Nemusíte nic žádat. Stačí mít 2 nebo více služeb u O2.</p>
+                  </div>
+                  <div className="explainer-col">
+                    <h3>Co vám to dává</h3>
+                    <p>Méně starostí, jedno vyúčtování a úspora až stovky korun měsíčně.</p>
+                  </div>
+                </div>
               </div>
-              <div className="explainer-col">
-                <h3>Jak to funguje</h3>
-                <p>Sleva se započítá automaticky. Nemusíte nic žádat. Stačí mít 2 nebo více služeb u O2.</p>
-              </div>
-              <div className="explainer-col">
-                <h3>Co vám to dává</h3>
-                <p>Méně starostí, jedno vyúčtování a úspora až stovky korun měsíčně.</p>
+
+              <div className="explainer-right">
+                <div className="explainer-example">
+                  <p className="explainer-example-label">Příklad: {EXAMPLE_BUNDLE.services.join(' + ')}</p>
+                  <div className="explainer-example-row">
+                    <span>Bez O2 Spolu</span>
+                    <span className="example-old">{EXAMPLE_BUNDLE.before} Kč</span>
+                  </div>
+                  <div className="explainer-example-row">
+                    <span>S O2 Spolu</span>
+                    <span className="example-new">{EXAMPLE_BUNDLE.after} Kč</span>
+                  </div>
+                  <div className="explainer-example-row highlight">
+                    <span>Úspora</span>
+                    <strong>−{EXAMPLE_BUNDLE.savings} Kč měsíčně</strong>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="explainer-example">
-              <p className="explainer-example-label">Příklad: {EXAMPLE_BUNDLE.services.join(' + ')}</p>
-              <div className="explainer-example-row">
-                <span>Bez O2 Spolu</span>
-                <span className="example-old">{EXAMPLE_BUNDLE.before} Kč</span>
-              </div>
-              <div className="explainer-example-row">
-                <span>S O2 Spolu</span>
-                <span className="example-new">{EXAMPLE_BUNDLE.after} Kč</span>
-              </div>
-              <div className="explainer-example-row highlight">
-                <span>Úspora</span>
-                <strong>−{EXAMPLE_BUNDLE.savings} Kč měsíčně</strong>
-              </div>
+            <div className="explainer-cta">
+              <button
+                className="btn-primary"
+                onClick={() => scrollTo(chooseServiceRef)}
+              >
+                Vybrat službu
+              </button>
             </div>
-            <button
-              className="btn-primary"
-              onClick={() => scrollTo(chooseServiceRef)}
-            >
-              Vybrat službu
-            </button>
           </div>
         </section>
 

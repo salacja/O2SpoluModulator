@@ -38,7 +38,7 @@ export default function LandingPage({ onSelectBundle }) {
   }
 
   return (
-    <div className="landing">
+    <div className="landing landing-flow1">
       <header className="landing-header">
         <div className="header-inner">
           <span className="logo">O<sub>2</sub></span>
@@ -55,28 +55,30 @@ export default function LandingPage({ onSelectBundle }) {
         {/* Hero */}
         <section className="hero">
           <div className="hero-inner">
-            <span className="hero-badge">O2 Spolu</span>
-            <h1>
-              Spojte služby a ušetřete
-              <strong> až 450 Kč měsíčně</strong>
-            </h1>
-            <p className="hero-sub">
-              Mobil + Internet + TV v jednom balíčku. Čím víc služeb, tím větší sleva.
-            </p>
-            <div className="hero-cta">
-              <button className="btn-primary btn-lg" onClick={scrollToBundles}>
-                Vybrat balíček
-              </button>
+            <div className="hero-content">
+              <span className="hero-badge">O2 Spolu</span>
+              <h1>
+                Spojte služby a ušetřete
+                <strong> až 450 Kč měsíčně</strong>
+              </h1>
+              <p className="hero-sub">
+                Mobil + Internet + TV v jednom balíčku. Čím víc služeb, tím větší sleva.
+              </p>
+              <div className="hero-cta">
+                <button className="btn-primary btn-lg" onClick={scrollToBundles}>
+                  Vybrat balíček
+                </button>
+              </div>
             </div>
-            <div className="hero-visual">
-              <div className="visual-stack">
-                <span className="stack-item">Mobil</span>
-                <span className="stack-plus">+</span>
-                <span className="stack-item">Internet</span>
-                <span className="stack-plus">+</span>
-                <span className="stack-item">TV</span>
-                <span className="stack-arrow">→</span>
-                <span className="stack-savings">Sleva</span>
+            <div className="hero-illustration">
+              <div className="explainer-formula hero-formula">
+                <span className="formula-item">Mobil</span>
+                <span className="formula-plus">+</span>
+                <span className="formula-item">Internet</span>
+                <span className="formula-plus">+</span>
+                <span className="formula-item">TV</span>
+                <span className="formula-eq">=</span>
+                <span className="formula-result">sleva</span>
               </div>
             </div>
           </div>

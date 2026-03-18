@@ -63,7 +63,7 @@ export default function LandingPage({ order, setOrder, onOrder, scrollToBuilder,
     const newOrder = buildOrderFromBundle(preset)
     setOrder(newOrder)
     setEditCategory(null)
-    setTimeout(() => orderSummaryRef.current?.scrollIntoView({ behavior: 'smooth' }), 100)
+    setTimeout(() => editBundleRef.current?.scrollIntoView({ behavior: 'smooth' }), 100)
   }
 
   const addMobileTariff = (tariffId, simType = 'sim') => {
@@ -124,15 +124,8 @@ export default function LandingPage({ order, setOrder, onOrder, scrollToBuilder,
                 Sestavit balíček
               </button>
             </div>
-          </div>
-        </section>
-
-        {/* SECTION 2 – Jak funguje O2 Spolu */}
-        <section className="explainer how-it-works" ref={howItWorksRef}>
-          <div className="section-inner">
-            <h2>Jak funguje O2 Spolu</h2>
-            <div className="explainer-visual">
-              <div className="explainer-formula">
+            <div className="hero-illustration">
+              <div className="explainer-formula hero-formula">
                 <span className="formula-item">Mobil</span>
                 <span className="formula-plus">+</span>
                 <span className="formula-item">Internet</span>
@@ -142,6 +135,13 @@ export default function LandingPage({ order, setOrder, onOrder, scrollToBuilder,
                 <span className="formula-result">sleva</span>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* SECTION 2 – Jak funguje O2 Spolu */}
+        <section className="explainer how-it-works" ref={howItWorksRef}>
+          <div className="section-inner">
+            <h2>Jak funguje O2 Spolu</h2>
             <div className="explainer-example">
               <p className="explainer-example-label">Příklad: {EXAMPLE_BUNDLE.services.join(' + ')}</p>
               <div className="explainer-example-row">
@@ -413,63 +413,6 @@ export default function LandingPage({ order, setOrder, onOrder, scrollToBuilder,
             </div>
           </section>
         )}
-
-        {/* SECTION A – Quick purchase bundles */}
-        <section className="quick-bundles-section">
-          <div className="section-inner">
-            <h2>Nejoblíbenější balíčky</h2>
-            <div className="quick-bundles-grid">
-              <article className="bundle-card">
-                <div className="bundle-body">
-                  <h3 className="bundle-name">Mobil + Internet</h3>
-                  <p className="bundle-card-body">Nejoblíbenější kombinace pro domácnost.</p>
-                  <div className="bundle-meta">
-                    <span>Cena od — Kč</span>
-                    <span className="bundle-savings">Ušetříte — Kč</span>
-                  </div>
-                  <button
-                    className="btn-primary"
-                    onClick={() => scrollTo(bundleCardsRef)}
-                  >
-                    Vybrat balíček
-                  </button>
-                </div>
-              </article>
-              <article className="bundle-card">
-                <div className="bundle-body">
-                  <h3 className="bundle-name">Rodinný balíček</h3>
-                  <p className="bundle-card-body">Více mobilů + internet pro celou rodinu.</p>
-                  <div className="bundle-meta">
-                    <span>Cena od — Kč</span>
-                    <span className="bundle-savings">Ušetříte — Kč</span>
-                  </div>
-                  <button
-                    className="btn-primary"
-                    onClick={() => scrollTo(bundleCardsRef)}
-                  >
-                    Vybrat balíček
-                  </button>
-                </div>
-              </article>
-              <article className="bundle-card">
-                <div className="bundle-body">
-                  <h3 className="bundle-name">Internet + TV</h3>
-                  <p className="bundle-card-body">Zábava doma s internetem a televizí.</p>
-                  <div className="bundle-meta">
-                    <span>Cena od — Kč</span>
-                    <span className="bundle-savings">Ušetříte — Kč</span>
-                  </div>
-                  <button
-                    className="btn-primary"
-                    onClick={() => scrollTo(bundleCardsRef)}
-                  >
-                    Vybrat balíček
-                  </button>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
 
         {/* SECTION B – What you can add to O2 Spolu (service hub) */}
         <section className="service-hub-section">
