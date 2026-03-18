@@ -97,7 +97,7 @@ export default function LandingPage({ order, setOrder, onOrder, scrollToBuilder,
   }
 
   return (
-    <div className="landing landing-responsive">
+    <div className="landing landing-responsive landing-flow4">
       <header className="landing-header">
         <div className="header-inner">
           <span className="logo">O<sub>2</sub></span>

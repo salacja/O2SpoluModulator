@@ -100,7 +100,7 @@ export default function LandingPage({ order, setOrder, onOrder, scrollToBuilder,
   const hasBundle = serviceCount >= 1
 
   return (
-    <div className="landing landing-responsive">
+    <div className="landing landing-responsive landing-flow2">
       <header className="landing-header">
         <div className="header-inner">
           <span className="logo">O<sub>2</sub></span>

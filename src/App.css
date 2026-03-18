@@ -97,6 +97,11 @@
 }
 
 /* Flow 1 – hero layout reusing Flow 2 structure */
+.landing-flow1 .hero {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .landing-flow1 .hero-inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -105,6 +110,8 @@
   gap: 40px;
   align-items: center;
   text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 @media (min-width: 1024px) {
@@ -138,6 +145,66 @@
 .landing-flow1 .hero-sub {
   margin-left: 0;
   margin-right: 0;
+}
+
+/* Flow 1 – sjednocení horizontálního zarovnání sekcí (bez dvojitého paddingu) */
+.landing-flow1 .explainer,
+.landing-flow1 .bundles,
+.landing-flow1 .trust,
+.landing-flow1 .landing-footer {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Flow 2 – sjednocení horizontálního zarovnání sekcí s header containerem */
+.landing-flow2 .hero {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.landing-flow2 .hero-inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* Flow 3 – sjednocení horizontálního zarovnání sekcí s header containerem */
+.landing-flow3 .hero {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.landing-flow3 .hero-inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* Flow 2 – Nejoblíbenější balíčky: stejná šířka kontejneru jako Hero */
+.landing-flow2 .quick-bundles-grid {
+  max-width: 1200px;
+}
+
+/* Flow 3 – Nejoblíbenější balíčky: stejná šířka kontejneru jako Hero */
+.landing-flow3 .quick-bundles-grid {
+  max-width: 1200px;
+}
+
+/* Flow 4 – sjednocení horizontálního zarovnání sekcí s header containerem */
+.landing-flow4 .hero {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.landing-flow4 .hero-inner {
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.landing-flow4 .landing-footer {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Explainer formula – Mobil + Internet + TV = sleva */
@@ -1543,6 +1610,17 @@
 /* Bundles */
 .bundles {
   padding: 48px 20px 80px;
+}
+
+/* Flow 1 – bundles sekce používá stejný container jako Hero */
+.landing-flow1 .bundles {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Flow 1 – balíčky mají stejnou šířku kontejneru jako Hero */
+.landing-flow1 .bundles .bundle-grid {
+  max-width: 1200px;
 }
 
 .bundles h2 {
